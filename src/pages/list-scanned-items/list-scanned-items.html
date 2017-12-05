@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>List Scanned Item</ion-title>
+    </ion-navbar>  
+</ion-header>
+  
+  <ion-content padding>
+          <ion-item *ngFor="let item of items;let i = index" style="white-space: normal;" text-wrap>
+            <ion-label>
+            <b> {{item.name}} </b><br>
+            <a><b>{{item.price}}</b></a>
+            </ion-label>
+            <ion-checkbox [(ngModel)]="checkedItems[i]" (ionChange)="chooseItem(checkedItems[i])" color="primary"></ion-checkbox>
+          </ion-item>
+        <button (click)="proceed()" [disabled]='disabledProceed' ion-button color="primary" type="submit"  round full margin-top>Proceed</button>
+  </ion-content>

@@ -1,0 +1,28 @@
+<!--
+  Generated template for the ItemSummaryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Summary</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   
+  <h3 style="color:#56C8C8"text-center>List Item Selected:</h3>
+  <ion-item>
+  <ul class="rounded">
+    <li *ngFor="let item of items">
+        {{item.name}}
+    </li>
+  </ul>
+  </ion-item>
+  <button (click)="goScanItem()" ion-button color="primary" type="submit"  round full  margin-top>Done</button><br>
+  
+</ion-content>
